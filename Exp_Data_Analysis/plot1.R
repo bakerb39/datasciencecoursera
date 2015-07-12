@@ -1,7 +1,7 @@
 #Load file and subset on Jan, Feb 2007
-dataFile <- "household_power_consumption.txt"
+dataFile <- "./household_power_consumption.txt"
 data <- read.table(dataFile, header=TRUE, sep=";", stringsAsFactors=FALSE, dec=".")
-subSetData <- data[data$Date %in% c("1/2/2007","2/2/2007") ,]
+subSetData <- data[data$Date %in% c("1/2/2007","2/2/2007"),]
 
 #Subset and histograph as plot1.png
 globalActivePower <- as.numeric(subSetData$Global_active_power)
